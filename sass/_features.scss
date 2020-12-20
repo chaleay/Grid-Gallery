@@ -1,4 +1,38 @@
 .features {
-  background-color: $color-grey-light-2;
+  margin: 15rem 0;
   grid-column: center-start / center-end;
+
+  display: grid;
+  //grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 6rem;
+
+  //align all grid items by tracks
+  //we are aligning by start so  they all begin at same point -
+  //we don't want stretch since then all items stretch to fit longest item
+  align-items: start;
+}
+
+.feature {
+  //to center content insi
+  //display: flex;
+  //justify-content: center;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  //grid-template-rows: min-content;
+  grid-column-gap: 2rem;
+  //position: relative;
+
+  &__icon {
+    fill: $color-primary;
+    height: 4.5rem;
+    width: 4.5rem;
+    grid-row: 1 / span 2; // -1 this works only for explicit grids
+    transform: translateY(-1rem);
+  }
+
+  &__text {
+    font-size: 1.7rem;
+    //grid-column: 2 / -1;
+  }
 }
