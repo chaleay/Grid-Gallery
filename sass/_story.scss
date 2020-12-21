@@ -6,5 +6,28 @@
   &__content {
     background-color: $color-grey-light-1;
     grid-column: col-start 5 / -1;
+
+    padding: 6rem 8vw;
+
+    //THE FLEX WAY
+    /*
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    */
+
+    display: grid;
+    // justify/ aligns the grid in the center of the grid container
+    //default is stretch
+    align-content: center;
+    //align-items /justify-items - aligns the GRID ITEMS along the column/row axis
+    justify-items: start;
+  }
+
+  &__text {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 4rem;
   }
 }
