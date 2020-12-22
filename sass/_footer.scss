@@ -1,4 +1,56 @@
 .footer {
   background-color: $color-secondary;
   grid-column: full-start / full-end;
+  padding: 8rem 0rem;
+
+  .nav {
+    list-style: none;
+
+    //easier time with responsive design with css grid
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    grid-gap: 0.5rem;
+
+    //display: flex;
+    //justify-items: center;
+    //flex-wrap: wrap;
+
+    align-items: center;
+    &__item {
+    }
+
+    &__link,
+    &__link:visited {
+      color: #fff;
+      font-size: 1.4rem;
+      text-decoration: none;
+      font-family: $font-display;
+      text-transform: uppercase;
+      display: block;
+      text-align: center;
+      padding: 1rem;
+      //height: 100%;
+      transition: all 0.2s;
+
+      //inlineblock and block both allow to set width and height for element,
+      // as well as top/bottom padding and margins are respected
+
+      //center text in their respective cells
+    }
+
+    &__link:hover,
+    &__link:visited {
+      background-color: rgba(#fff, 0.05);
+    }
+  }
+}
+
+.copyright {
+  color: #fff;
+  font-size: 1.4rem;
+  text-align: center;
+  margin-top: 6rem;
+  margin-right: auto;
+  margin-left: auto;
+  width: 70%;
 }
