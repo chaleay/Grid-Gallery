@@ -12,10 +12,10 @@
   display: grid;
   //want first row to occupy space
 
-  grid-template-rows: 1fr min-content 6rem 1fr;
+  grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
   //min content - smallest width possible
   //max contetn - biggest width possible
-  grid-template-columns: max-content;
+  grid-template-columns: minmax(min-content, max-content);
   row-gap: 1.5rem;
   padding: 8rem;
   padding-top: 4rem;
@@ -57,10 +57,17 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 3rem;
+
+    //grid properties
     justify-items: center;
+    align-items: center;
 
     img {
-      height: 2.5rem;
+      //the max the height can go is 2.5rem, but it can be less than taht
+      max-height: 2.5rem;
+      //same thing for max-width
+      max-width: 100%;
+
       filter: brightness(70%);
     }
   }
