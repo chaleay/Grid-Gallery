@@ -14,7 +14,8 @@
 
   @media only screen and (max-width: $bp-medium) {
     grid-column: full-start / full-end;
-    //padding around this cell to give it more breathing room
+    //padding around this cell to give it more breathi
+    padding: 3.5rem;
   }
 
   &__list {
@@ -24,8 +25,12 @@
     row-gap: 5vh;
 
     @media only screen and (max-width: $bp-medium) {
-      grid-template-columns: repeat(3, min-content max-content);
-      //display: flex;
+      //grid-template-columns: repeat(3, min-content max-content);
+      display: flex;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      display: grid;
     }
   }
 
