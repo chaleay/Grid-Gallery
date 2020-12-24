@@ -12,11 +12,21 @@
   row-gap: 3rem;
   justify-items: center;
 
+  @media only screen and (max-width: $bp-medium) {
+    grid-column: full-start / full-end;
+    //padding around this cell to give it more breathing room
+  }
+
   &__list {
     display: grid;
     grid-template-columns: min-content max-content;
     column-gap: 2rem;
     row-gap: 5vh;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-template-columns: repeat(3, min-content max-content);
+      //display: flex;
+    }
   }
 
   &__img {
